@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SwiftWasm Component Library</title>
+    <style>
+      body{
+        font-family: "SF Pro";
+        font-size: 100%;
+      	overflow-y: scroll;
+       font-family: sans-serif;
+       -ms-text-size-adjust: 100%;
+       -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        background-color: #F2F7FB;
+        margin: 0;
+      }
+      .app{
+        background-color: #F2F7FB;
+        height: 100vh;
+      }
+      .sidebar {
+        position: absolute;
+        width: 12em;
+        height: 100%;
+        top: 0;
+        overflow:hidden;
+        background-color: #19222a;
+        -webkit-transform: translateZ(0);
+        visibility: visible;
+        -webkit-backface-visibility: hidden;
+        border-right: 2px solid #09f;
+      }
+      .sidebar header{
+        background-color: #09f;
+        width: 100%;
+        display:block;
+        padding: 0.75em	1em;
+      }
+      .sidebar-nav {
+        position: fixed;
+        background-color: #19222a;
+        height: 100%;
+        font-weight: 400;
+        font-size: 1.2em;
+        overflow: auto;
+        padding-bottom: 6em;
+        z-index: 9;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+      .sidebar-nav ul {
+        list-style: none;
+        display: block;
+        padding: 0;
+        margin: 0;
+      }
+      .sidebar-nav ul li {
+        margin-left: 0;
+        padding-left: 0;
+        display:inline-block;
+        width: 100%;
+      }
+      .sidebar-nav ul li {
+        cursor: pointer;
+        color: rgba(255,255,255,0.9);
+        font-size: 0.75em;
+        padding: 1.05em	1em;
+        position: relative;
+        display: block;
+        text-decoration: none;
+      }
+      .sidebar-nav ul li:hover {
+        text-decoration: underline;
+      }
+      #storyContainer {
+        box-shadow: 0 0 5px 0 rgb(43 43 43 / 10%), 0 11px 6px -7px rgb(43 43 43 / 10%);
+        border-radius: 5px;
+        border: none;
+        background-color: #fff;
+        margin-left: 14em;
+        margin-top: 2em;
+        margin-right: 2em;
+        padding: 20px;
+        height: 50vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      #outputs {
+        box-shadow: 0 0 5px 0 rgb(43 43 43 / 10%), 0 11px 6px -7px rgb(43 43 43 / 10%);
+        border-radius: 5px;
+        border: none;
+        background-color: #fff;
+        margin-left: 14em;
+        margin-top: 2em;
+        margin-right: 2em;
+        padding: 20px;
+        height: 25vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      #componentContainer {
+        float: right;
+        text-align: center;
+        width: 70%;
+      }
+      #inputContainer {
+        width: 30%;
+      }
+    </style>
+  <script type="text/javascript" src="b6458bb22c873404.js"></script></head>
+  <body>
+    <section class="app">
+      <aside class="sidebar">
+         <header>
+          Menu
+        </header>
+        <nav class="sidebar-nav">
+          <ul id="sidebarNavUl"></ul>
+        </nav>
+      </aside>
+
+      <div id="storyContainer">
+        <div id="componentContainer"></div>
+        <div id="inputContainer"></div>
+      </div>
+      <div id="outputs">
+        <h2>Outputs</h2>
+        <div id="outputContainer"></div>
+      </div>
+    </section>
+  </body>
+</html>
