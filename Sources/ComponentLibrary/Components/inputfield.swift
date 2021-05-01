@@ -81,4 +81,8 @@ class InputField: Component {
     func updateInputFieldType() {
         self.input.type = .string(self.type.rawValue)
     }
+    
+    func getValue() -> JSValue {
+        return self.input.value
+    }
 }
