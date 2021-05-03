@@ -1,3 +1,1 @@
-import JavaScriptKit
-
-var app = App()
+let app = App()

@@ -94,13 +94,13 @@ class Button: Component {
         self.listeners.append(listener)
     }
     
-    func onClickButton() {
+    private func onClickButton() {
         self.listeners.forEach { listener in
             listener.buttonClicked()
         }
     }
     
-    func updateClassList() {
+    private func updateClassList() {
         switch (self.type) {
         case .primary:
             self.button.classList.remove("customButtonSecondary")

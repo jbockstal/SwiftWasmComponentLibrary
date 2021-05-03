@@ -57,7 +57,7 @@ class ButtonStory: Story, ButtonClickListener, InputChangeListener {
     }
         
     func buttonClicked() {
-        var outputContainer = JSObject.global.document.getElementById("outputContainer")
+        var outputContainer = JSObject.global.document.getElementById("outputs")
         var index = Int(outputContainer.children.length.number! + 1)
         var element = JSObject.global.document.createElement("div")
         element.innerText = .string("\(index). Clicked \(self.button.type) button \(self.button.label)")

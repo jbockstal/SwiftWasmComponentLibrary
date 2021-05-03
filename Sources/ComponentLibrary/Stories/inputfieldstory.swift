@@ -57,7 +57,7 @@ class InputFieldStory: Story, InputFieldChangeListener, InputChangeListener {
     }
     
     func inputFieldChanged(value:String) {
-        let outputContainer = JSObject.global.document.getElementById("outputContainer")
+        let outputContainer = JSObject.global.document.getElementById("outputs")
         let index = Int(outputContainer.children.length.number! + 1)
         var element = JSObject.global.document.createElement("div")
         

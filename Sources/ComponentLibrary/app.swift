@@ -87,7 +87,7 @@ class App: NavigationUpdateListener, StoryUpdateListener {
     }
     
     func updateOutputContainer() {
-        var outputContainer = JSObject.global.document.getElementById("outputContainer")
+        var outputContainer = JSObject.global.document.getElementById("outputs")
         outputContainer.innerHTML = nil
         
         if let currentStory = currentStory {

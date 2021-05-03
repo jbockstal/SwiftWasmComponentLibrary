@@ -72,13 +72,13 @@ class InputField: Component {
         self.listeners.append(listener)
     }
     
-    func onInputFieldChange(value: [JSValue]) {
+    private func onInputFieldChange(value: [JSValue]) {
         self.listeners.forEach { listener in
             listener.inputFieldChanged(value: value[0].target.value.string!)
         }
     }
     
-    func updateInputFieldType() {
+    private func updateInputFieldType() {
         self.input.type = .string(self.type.rawValue)
     }
     

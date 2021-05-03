@@ -46,7 +46,7 @@ class SearchFieldStory: Story, InputChangeListener, SearchChangedListener {
     }
     
     func searchChanged(value:String) {
-        var outputContainer = JSObject.global.document.getElementById("outputContainer")
+        var outputContainer = JSObject.global.document.getElementById("outputs")
         var index = Int(outputContainer.children.length.number! + 1)
         var element = JSObject.global.document.createElement("div")
         element.innerText = .string("\(index). Started search for \(self.searchField.searchLabel) by clicking button \(self.searchField.buttonLabel), searching for '\(value)'")
