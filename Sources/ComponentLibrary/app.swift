@@ -1,7 +1,7 @@
 import JavaScriptKit
 
 class App: NavigationUpdateListener, StoryUpdateListener {
-    var navigation: Navigation = Navigation(items:["Button", "Link", "Input Field", "Menu Item", "Carousel", "Search Field"])
+    var navigation: Navigation = Navigation(items:["Button", "Link", "Input Field", "Menu Item", "Carousel", "Search Field", "Filter"])
     var currentStory: Story?
     
     init() {
@@ -45,6 +45,9 @@ class App: NavigationUpdateListener, StoryUpdateListener {
         case "Search Field":
             let searchField = SearchField(searchLabel:"Menu Item Name", buttonLabel:"Start search")
             newStory = SearchFieldStory(name: "Search Field", component: searchField)
+        case "Filter":
+            let filter = Filter(items:["John", "Amanda", "Sam", "Justin"], filterLabel:"Name")
+            newStory = FilterStory(name:"Filter", component: filter)
         default:
             JSObject.global.console.log("Unknown navigation item clicked")
         }
