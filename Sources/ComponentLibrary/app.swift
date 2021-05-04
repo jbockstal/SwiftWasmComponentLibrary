@@ -33,12 +33,12 @@ class App: NavigationUpdateListener, StoryUpdateListener {
             let inputField = InputField(label:.string("Email address"), id:.string("email"), type:.standard)
             newStory = InputFieldStory(name:"Input Field", component:inputField)
         case "Menu Item":
-            let menuItem = MenuItem(title:"Veggie tomato mix", price:"€ 2,50", imgSrc:"https://i2.wp.com/wallflowerkitchen.com/wp-content/uploads/2017/08/TomatoRisotto1.jpg?w=800&ssl=1", imgAlt:"Picture of veggie tomato mix")
+            let menuItem = MenuItem(title:"Veggie tomato mix", price:"€ 2,50", imgSrc:"veggietomatomix.jpeg", imgAlt:"Picture of veggie tomato mix")
             newStory = MenuItemStory(name: "Menu Item", component:menuItem)
         case "Carousel":
-            let menuItemOne = MenuItem(title:"Veggie tomato mix", price:"€ 2,50", imgSrc:"https://i2.wp.com/wallflowerkitchen.com/wp-content/uploads/2017/08/TomatoRisotto1.jpg?w=800&ssl=1", imgAlt:"Picture of veggie tomato mix")
+            let menuItemOne = MenuItem(title:"Veggie tomato mix", price:"€ 2,50", imgSrc:"veggietomatomix.jpeg", imgAlt:"Picture of veggie tomato mix")
             let menuItemTwo = MenuItem(title:"French fries", price:"€ 1,50", imgSrc:"https://images.bruzzket.be/2018-12/frietjes_c_photonews.jpg?auto=format&crop=edges%252C%2520entropy&fit=crop&ixlib=php-1.1.0&q=95&w=260&s=979337250e2a1d6422f2be6d361098e2", imgAlt:"Picture of french fries")
-            let menuItemThree = MenuItem(title:"Pizza Margherita", price:"€ 2,00", imgSrc:"https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/5802fab5-fdce-468a-a830-43e8001f5a72/Derivates/c00dc34a-e73d-42f0-a86e-e2fd967d33fe.jpg", imgAlt:"Picture of pizza margherita")
+            let menuItemThree = MenuItem(title:"Spaghetti", price:"€ 2,00", imgSrc:"spaghetti.jpeg", imgAlt:"Picture of spaghetti")
             
             let carousel = Carousel(items:[menuItemOne, menuItemTwo, menuItemThree])
             newStory = CarouselStory(name:"Carousel", component:carousel)

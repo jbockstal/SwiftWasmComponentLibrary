@@ -42,7 +42,7 @@ class MenuItemStory: Story, InputChangeListener {
         
         var inputFieldImg = document.createElement("input")
         // TODO: Refactor, label is used as value
-        inputFieldImg.value = .string("https://i2.wp.com/wallflowerkitchen.com/wp-content/uploads/2017/08/TomatoRisotto1.jpg?w=800&ssl=1")
+        inputFieldImg.value = .string("veggietomatomix.jpeg")
         inputFieldImg.id = .string("imgSrc")
         inputFieldImg.type = "input"
         

@@ -10,13 +10,11 @@ class FilterStory: Story, InputChangeListener, FilterChangedListener {
     
     override func initializeComponent() {
         self.filter.register(listener:self)
-        // TODO: Refactor: move logic
         self.hasOutputs = false
     }
     
     override func initializeInputs() {
         var inputField = document.createElement("input")
-        // TODO: Refactor, label is used as value
         inputField.value = .string("Name")
         inputField.id = .string("label")
         inputField.type = "input"

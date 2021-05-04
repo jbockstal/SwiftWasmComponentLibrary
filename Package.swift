@@ -13,7 +13,12 @@ let package = Package(
             name: "ComponentLibrary",
             dependencies: [
                 .product(name: "JavaScriptKit", package: "JavaScriptKit")
-            ]),
+            ],
+          resources: [
+            .copy("Assets/spaghetti.jpeg"),
+            .copy("Assets/veggietomatomix.jpeg")
+          ]
+          ),
         .testTarget(
             name: "ComponentLibraryTests",
             dependencies: ["ComponentLibrary"]),

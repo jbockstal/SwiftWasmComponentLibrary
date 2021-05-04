@@ -8,8 +8,8 @@ class Carousel: Component {
         set {
             if (newValue >= 500) {
                 _interval = newValue
-                self.updateInterval()
             }
+            self.updateInterval()
         }
         
         get {
@@ -105,7 +105,7 @@ class Carousel: Component {
         return div
     }
     
-    func onSlide() {        
+    private func onSlide() {
         if var currentItemIndex = self.currentItemIndex {
             if (currentItemIndex < self.items.count - 1) {
                 self.currentItemIndex = currentItemIndex + 1
@@ -137,7 +137,7 @@ class Carousel: Component {
         }
     }
     
-    func updateInterval() {
+    private func updateInterval() {
         if let slide = self.slide {            
             let window = JSObject.global.window
             var highestId = window.setInterval(";").number!;
