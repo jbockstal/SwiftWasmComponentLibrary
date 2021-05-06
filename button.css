@@ -1,0 +1,24 @@
+.customButtonPrimary {
+  cursor: pointer;
+  color: white;
+  background-color: #FA4A0C;
+  border-radius: 30px;
+  border: none;
+  font-size: 17px;
+  padding: 10px 20px;
+}
+.customButtonPrimary:focus {
+  outline: 0;
+}
+.customButtonSecondary {
+  cursor: pointer;
+  background-color: white;
+  color: #FA4A0C;
+  border-radius: 30px;
+  border: 1px solid #FA4A0C;
+  font-size: 17px;
+  padding: 10px 20px;
+}
+.customButtonSecondary:focus {
+  outline: 0;
+}
