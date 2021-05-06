@@ -30,46 +30,9 @@ class Button: Component {
     let document = JSObject.global.document
     var listeners: [ButtonClickListener] = []
     var button: JSValue
-    let customCSS: String = """
-      .customButtonPrimary {
-        cursor: pointer;
-        color: white;
-        background-color: #FA4A0C;
-        border-radius: 30px;
-        border: none;
-        font-size: 17px;
-        padding: 10px 20px;
-      }
-      .customButtonPrimary:focus {
-        outline: 0;
-      }
-      .customButtonSecondary {
-        cursor: pointer;
-        background-color: white;
-        color: #FA4A0C;
-        border-radius: 30px;
-        border: 1px solid #FA4A0C;
-        font-size: 17px;
-        padding: 10px 20px;
-      }
-      .customButtonSecondary:focus {
-        outline: 0;
-      }
-    """
     
     
-    init(label: JSValue, type: ButtonType) {
-        var buttonStyle = document.getElementById("buttonStyle")
-        
-        if buttonStyle != nil {
-            buttonStyle.innerText = .string(customCSS)
-        } else {
-            var style = document.createElement("style")
-            style.id = "buttonStyle"
-            style.innerText = .string(customCSS)
-            document.head.appendChild(style)
-        }
-        
+    init(label: JSValue, type: ButtonType) {        
         self.button = JSObject.global.document.createElement("button")
         self.label = label
         self.type = type

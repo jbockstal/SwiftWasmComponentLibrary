@@ -1,7 +1,7 @@
 import JavaScriptKit
 
 class App: NavigationUpdateListener, StoryUpdateListener {
-    var navigation: Navigation = Navigation(items:["Button", "Link", "Input Field", "Menu Item", "Carousel", "Search Field", "Filter"])
+    var navigation: Navigation = Navigation(items:["Button", "Input Field", "Menu Item", "Carousel", "Search Field", "Filter"])
     var currentStory: Story?
     
     init() {
@@ -26,9 +26,6 @@ class App: NavigationUpdateListener, StoryUpdateListener {
         case "Button":
             let button = Button(label:.string("Login"), type:.primary)
             newStory = ButtonStory(name: "Button", component:button)
-        case "Link":
-            let link = Link(label:.string("Go to Google"), url:.string("https://www.google.com"), tooltip:.string("Click me to navigate"))
-            newStory = LinkStory(name: "Link", component: link)
         case "Input Field":
             let inputField = InputField(label:.string("Email address"), id:.string("email"), type:.standard)
             newStory = InputFieldStory(name:"Input Field", component:inputField)

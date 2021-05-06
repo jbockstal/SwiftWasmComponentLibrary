@@ -16,7 +16,9 @@ let package = Package(
             ],
           resources: [
             .copy("Assets/spaghetti.jpeg"),
-            .copy("Assets/veggietomatomix.jpeg")
+            .copy("Assets/veggietomatomix.jpeg"),
+            .copy("Assets/button.css"),
+            .copy("Assets/styles.css")
           ]
           ),
         .testTarget(
