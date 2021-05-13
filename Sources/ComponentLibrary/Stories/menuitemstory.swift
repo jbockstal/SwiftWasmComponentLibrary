@@ -9,13 +9,11 @@ class MenuItemStory: Story, InputChangeListener {
     }
     
     override func initializeComponent() {
-        // TODO: Refactor: move logic
         self.hasOutputs = false
     }
     
     override func initializeInputs() {
         var inputFieldTitle = document.createElement("input")
-        // TODO: Refactor, label is used as value
         inputFieldTitle.value = .string("Veggie tomato mix")
         inputFieldTitle.id = .string("title")
         inputFieldTitle.type = "input"
@@ -28,7 +26,6 @@ class MenuItemStory: Story, InputChangeListener {
         self.inputs.append(inputElement)
         
         var inputFieldPrice = document.createElement("input")
-        // TODO: Refactor, label is used as value
         inputFieldPrice.value = .string("€ 2,50")
         inputFieldPrice.id = .string("price")
         inputFieldPrice.type = "input"
@@ -41,7 +38,6 @@ class MenuItemStory: Story, InputChangeListener {
         self.inputs.append(inputElement)
         
         var inputFieldImg = document.createElement("input")
-        // TODO: Refactor, label is used as value
         inputFieldImg.value = .string("veggietomatomix.jpeg")
         inputFieldImg.id = .string("imgSrc")
         inputFieldImg.type = "input"

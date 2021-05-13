@@ -138,7 +138,8 @@ class Carousel: Component {
     }
     
     private func updateInterval() {
-        if let slide = self.slide {            
+        if let slide = self.slide {
+            // https://stackoverflow.com/questions/3141064/how-to-stop-all-timeouts-and-intervals-using-javascript
             let window = JSObject.global.window
             var highestId = window.setInterval(";").number!;
             var i = 0.0

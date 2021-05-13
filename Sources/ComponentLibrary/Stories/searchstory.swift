@@ -12,10 +12,8 @@ class SearchFieldStory: Story, InputChangeListener, SearchChangedListener {
         self.searchField.register(listener:self)
     }
 
-    // TODO
     override func initializeInputs() {
         var searchLabel = document.createElement("input")
-        // TODO: Refactor, label is used as value
         searchLabel.value = .string("Menu item name")
         searchLabel.id = .string("searchLabel")
         searchLabel.type = "input"
@@ -28,7 +26,6 @@ class SearchFieldStory: Story, InputChangeListener, SearchChangedListener {
         self.inputs.append(inputElement)
         
         var buttonLabel = document.createElement("input")
-        // TODO: Refactor, label is used as value
         buttonLabel.value = .string("Start search")
         buttonLabel.id = .string("buttonLabel")
         buttonLabel.type = "input"

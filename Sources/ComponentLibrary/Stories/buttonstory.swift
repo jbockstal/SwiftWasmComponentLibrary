@@ -14,7 +14,6 @@ class ButtonStory: Story, ButtonClickListener, InputChangeListener {
     
     override func initializeInputs() {
         var inputField = document.createElement("input")
-        // TODO: Refactor, label is used as value
         inputField.value = .string("Login")
         inputField.id = .string("label")
         inputField.type = "input"

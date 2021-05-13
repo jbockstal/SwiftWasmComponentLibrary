@@ -10,6 +10,7 @@ class App: NavigationUpdateListener, StoryUpdateListener {
     }
     
     func navigationUpdated(item: String) {
+        // https://stackoverflow.com/questions/3141064/how-to-stop-all-timeouts-and-intervals-using-javascript
         // Clear all intervals
         // Set a fake timeout to get the highest timeout id
         var highestId = JSObject.global.window.setInterval(";").number!;
